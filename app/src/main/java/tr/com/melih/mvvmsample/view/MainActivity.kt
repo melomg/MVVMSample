@@ -23,9 +23,11 @@ class MainActivity : AppCompatActivity(), RepositoryRecyclerViewAdapter.OnItemCl
         binding.viewModel = viewModel
         binding.executePendingBindings()
 
-        binding.repositoryRv.layoutManager = LinearLayoutManager(this)
-        binding.repositoryRv.adapter = repositoryRecyclerViewAdapter
-        viewModel.repositories.observe(this, Observer<ArrayList<Repository>> { it?.let{ repositoryRecyclerViewAdapter.replaceData(it)} })
+        binding.repositoryRv.apply {
+            layoutManager = LinearLayoutManager(this@MainActivity)
+            adapter = repositoryRecyclerViewAdapter
+        }
+        viewModel.repositories.observe(this, Observer<ArrayList<Repository>> { it?.let { repositoryRecyclerViewAdapter.replaceData(it) } })
 
 
     }

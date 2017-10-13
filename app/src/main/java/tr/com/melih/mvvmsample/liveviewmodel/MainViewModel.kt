@@ -5,7 +5,6 @@ import android.arch.lifecycle.AndroidViewModel
 import android.arch.lifecycle.MutableLiveData
 import android.databinding.ObservableField
 import tr.com.melih.mvvmsample.manager.NetManager
-import tr.com.melih.mvvmsample.model.OnDataReadyCallback
 import tr.com.melih.mvvmsample.model.OnRepositoryReadyCallback
 import tr.com.melih.mvvmsample.model.GitRepoModel
 import tr.com.melih.mvvmsample.model.Repository
